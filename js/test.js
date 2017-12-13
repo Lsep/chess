@@ -1,9 +1,8 @@
 (function () {
     $(document).ready(function () {
         $("#test").click(function () {
-            var board = new Board();
-            board.init();
-            console.log(board.value)
+            window.Board.init();
+            console.log(Board.value)
         });
     });
     

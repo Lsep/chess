@@ -1,27 +1,33 @@
 (function () {
-    window.Player = {
-      red:{"code":1,"name":"红方"},
-      blue:{"code":0,"name":"蓝方"}
+    window.Players = {
+        "red": {"key": "red", "code": 1, "name": "红方"},
+        "blue": {"key": "blue", "code": 0, "name": "蓝方"}
     };
-    window.Piece = {
-        x:{"code": 7, "name": "象"},
-        s:{"code": 6, "name": "狮"},
-        h:{"code": 5, "name": "虎"},
-        b:{"code": 4, "name": "豹"},
-        l:{"code": 3, "name": "狼"},
-        g:{"code": 2, "name": "狗"},
-        m:{"code": 1, "name": "猫"},
-        S:{"code": 0, "name": "鼠"}
+    window.Pieces = {
+        "x": {"key": "x", "code": 7, "name": "象"},
+        "sz": {"key": "sz", "code": 6, "name": "狮"},
+        "h": {"key": "h", "code": 5, "name": "虎"},
+        "b": {"key": "b", "code": 4, "name": "豹"},
+        "l": {"key": "l", "code": 3, "name": "狼"},
+        "g": {"key": "g", "code": 2, "name": "狗"},
+        "m": {"key": "m", "code": 1, "name": "猫"},
+        "s": {"key": "s", "code": 0, "name": "鼠"}
     };
-    window.piece = function (player,piece) {
-        this.player = Player[player];
-        this.piece = Piece[piece];
+    window.Boards = {
+        "normal":{"key": "normal", "code": 1, "name": "普通棋盘"},
+        "river":{"key": "river", "code": 2, "name": "小河"},
+        "trap":{"key": "trap", "code": 3, "name": "陷阱"},
+        "den":{"key": "den", "code": 4, "name": "兽穴"}
+    };
+    window.Piece = function (player, piece) {
+        this.player = Players[player];
+        this.piece = Pieces[piece];
     };
     window.Board = {
-        value:[],
-        init:function () {
+        value: [],
+        init: function () {
             this.value = [
-                [piece(Player.red,Piece.s),2,3,4,5,6,7,8,9],
+                [new Piece(Players.red.key, Pieces.s.key), "", 3, 4, 5, 6, 7, 8, 9],
                 [],
                 [],
                 [],
