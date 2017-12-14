@@ -1,0 +1,42 @@
+table {
+    border: 1px solid #151515;
+}
+
+table tr {
+    border: 1px solid #151515;
+}
+
+table tr td {
+    border: 1px solid #151515;
+    height: 50px;
+    width: 40px;
+    text-align: center;
+}
+
+.piece {
+
+}
+
+.red {
+    color: red;
+}
+
+.blue {
+    color: blue;
+}
+
+.normal {
+
+}
+
+.river {
+
+}
+
+.trap {
+
+}
+
+.den {
+
+}

@@ -1,8 +1,8 @@
 (function () {
     $(document).ready(function () {
         $("#test").click(function () {
-            window.Board.init();
-            console.log(Board.value)
+            var board = new Board("chessBoard");
+            board.init();
         });
     });
     
